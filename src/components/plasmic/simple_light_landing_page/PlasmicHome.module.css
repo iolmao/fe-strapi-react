@@ -332,7 +332,7 @@
 }
 .tweetCard:global(.__wab_instance) {
   position: relative;
-  width: auto;
+  width: 324px;
 }
 .solutions:global(.__wab_instance) {
   position: relative;

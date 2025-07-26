@@ -65,24 +65,26 @@ function PlasmicTweetCard__RenderFunc(props) {
       )}
     >
       <StrapiField
-        className={classNames("__wab_instance", sty.strapiField__aodyD)}
+        data-plasmic-name={"tweetTitle"}
+        data-plasmic-override={overrides.tweetTitle}
+        className={classNames("__wab_instance", sty.tweetTitle)}
         path={"t_title"}
       />
 
       <StrapiField
-        className={classNames("__wab_instance", sty.strapiField__bCnB5)}
+        data-plasmic-name={"tweetDescr"}
+        data-plasmic-override={overrides.tweetDescr}
+        className={classNames("__wab_instance", sty.tweetDescr)}
         path={"t_content"}
-      />
-
-      <StrapiField
-        className={classNames("__wab_instance", sty.strapiField__m8Ngf)}
       />
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "tweetTitle", "tweetDescr"],
+  tweetTitle: ["tweetTitle"],
+  tweetDescr: ["tweetDescr"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -117,6 +119,8 @@ export const PlasmicTweetCard = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    tweetTitle: makeNodeComponent("tweetTitle"),
+    tweetDescr: makeNodeComponent("tweetDescr"),
     // Metadata about props expected for PlasmicTweetCard
     internalVariantProps: PlasmicTweetCard__VariantProps,
     internalArgProps: PlasmicTweetCard__ArgProps

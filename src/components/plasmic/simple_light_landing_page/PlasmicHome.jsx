@@ -588,8 +588,8 @@ export const PlasmicHome = Object.assign(
     internalArgProps: PlasmicHome__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "",
-      description: "",
+      title: "Testing Strapi+Plasmic",
+      description: "I'm testing plasmic + strapi connections",
       ogImageSrc: "",
       canonical: ""
     }
